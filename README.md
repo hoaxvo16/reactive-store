@@ -52,7 +52,7 @@ store.dispatch("update", keys.count, count + 1)}
 
 ```ts
 import './styles.css';
-import { Store, StoreInjector } from '@mcsheffey/reactive-stor';
+import { Store, StoreInjector } from '@mcsheffey/reactive-store';
 
 const store = new Store();
 const secondStore = new Store();
