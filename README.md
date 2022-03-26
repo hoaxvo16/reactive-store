@@ -42,7 +42,7 @@ secondStore.createData(keys.todoList, []);
 export const App = StoreInjector([store, secondStore], Component);
 ```
 
-- Dispatch an action. There are two kind of action update (update data) or remove (delete data from store)
+- Dispatch an action. There are two kind of action update (update data) or remove (delete data) from store
 
 ```ts
 store.dispatch("update", keys.count, count + 1)}
