@@ -9,6 +9,6 @@ export const keys = {
   count: 'count',
 };
 
-store.createData(keys.inputValue, '');
-store.createData(keys.count, 0);
-secondStore.createData(keys.todoList, []);
+store.add(keys.inputValue, '');
+store.add(keys.count, 0);
+secondStore.add(keys.todoList, []);

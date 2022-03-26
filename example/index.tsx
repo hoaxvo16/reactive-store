@@ -16,21 +16,17 @@ const Component = ({ name }: any) => {
       <p>count: {count}</p>
       <input
         placeholder="enter todo name"
-        onChange={(e: any) =>
-          store.dispatch('update', keys.inputValue, e.target.value)
-        }
+        onChange={(e: any) => store.update(keys.inputValue, e.target.value)}
       />
       <button
         onClick={() =>
-          secondStore.dispatch('update', keys.todoList, [...todoList, todoName])
+          secondStore.update(keys.todoList, [...todoList, todoName])
         }
       >
         Add todo
       </button>
 
-      <button onClick={() => store.dispatch('update', keys.count, count + 1)}>
-        +
-      </button>
+      <button onClick={() => store.update(keys.count, count + 1)}>+</button>
       <button onClick={() => setMount(!mount)}>
         {mount ? 'Unmount todo list' : 'Mount todo list'}
       </button>
