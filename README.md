@@ -1,10 +1,21 @@
-### Reactive store - a mininum external store for react
+### Reactive store - a minimum and lightweight external store for react
 
 #### Feature
 
 - Inject external data to React component
 - Support dispatch action to remove or update data
-- Incoming: Asynchronous action
+
+### Installation
+
+```bash
+yarn add @mcsheffey/reactive-store
+```
+
+or
+
+```bash
+npm install @mcsheffey/reactive-store
+```
 
 #### Usage
 
@@ -41,7 +52,7 @@ store.dispatch("update", keys.count, count + 1)}
 
 ```ts
 import './styles.css';
-import { Store, StoreInjector } from './reactive';
+import { Store, StoreInjector } from '@mcsheffey/reactive-stor';
 
 const store = new Store();
 const secondStore = new Store();
