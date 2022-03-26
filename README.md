@@ -1,3 +1,5 @@
+![](https://i.ibb.co/6B4bhX7/Vector.png)
+
 ### Reactive store - a minimum and lightweight external store for react
 
 #### Feature
