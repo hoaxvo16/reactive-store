@@ -4,7 +4,7 @@
 
 #### Feature
 
-- Inject external data to React component
+- Inject external data to React hook component
 - Support action to remove or update data
 
 ### Installation
