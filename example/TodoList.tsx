@@ -2,11 +2,17 @@ import * as React from 'react';
 import { StoreInjector } from '../src';
 import { secondStore, keys } from './store';
 
+interface IReturnValue {
+  list: () => Array<string>;
+}
+
 const Component = () => {
-  const todoList: Array<string> = secondStore.get(keys.todoList);
+  const todoList: IReturnValue['list'] = React.useCallback(() => {
+    return secondStore.get(keys.todoList);
+  }, []);
   return (
     <div>
-      {todoList.map(val => (
+      {todoList().map(val => (
         <p key={val}>{val}</p>
       ))}
     </div>

@@ -53,6 +53,34 @@ store.update(keys.count, count + 1);
 store.remove(keys.count);
 ```
 
+- Memo data:
+  For some reason you mau don't want to recreate data that extract from store every rerender, this can be achieved by using useCallback hook:
+
+```ts
+import * as React from 'react';
+import { StoreInjector } from '../src';
+import { secondStore, keys } from './store';
+
+interface IReturnValue {
+  list: () => Array<string>;
+}
+
+const Component = () => {
+  const todoList: IReturnValue['list'] = React.useCallback(() => {
+    return secondStore.get(keys.todoList);
+  }, []);
+  return (
+    <div>
+      {todoList().map(val => (
+        <p key={val}>{val}</p>
+      ))}
+    </div>
+  );
+};
+
+export const TodoList = StoreInjector(secondStore, Component);
+```
+
 #### Full code example
 
 ```ts
