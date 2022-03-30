@@ -54,7 +54,7 @@ store.remove(keys.count);
 ```
 
 - Memo data:
-  For some reason you mau don't want to recreate data that extract from store every rerender, this can be achieved by using useCallback hook:
+  For some reason you may don't want to recreate data that extract from store every rerender, this can be achieved by using useCallback hook:
 
 ```ts
 import * as React from 'react';
