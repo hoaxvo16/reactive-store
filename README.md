@@ -2,12 +2,22 @@
 
 ### Reactive store - a minimum and lightweight external store for react
 
-#### Feature
+### Table of contents
+
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage]("#usage")
+4. [Quick start]("#quickstart")
+5. [React 18 support](#React18)
+6. [About]("#about")
+
+### Features <a name="features"></a>
 
 - Inject external data to React hook component
 - Support action to remove or update data
+- Light weight
 
-### Installation
+### Installation <a name="installation"></a>
 
 ```bash
 yarn add @mcsheffey/reactive-store
@@ -19,7 +29,7 @@ or
 npm install @mcsheffey/reactive-store
 ```
 
-#### Usage
+### Usage <a name="usage"></a>
 
 - Create a store
 
@@ -81,56 +91,25 @@ const Component = () => {
 export const TodoList = StoreInjector(secondStore, Component);
 ```
 
-#### Full code example
+### Quick start <a name="quickstart"></a>
 
 ```ts
-import './styles.css';
 import { Store, StoreInjector } from '@mcsheffey/reactive-store';
 
 const store = new Store();
-const secondStore = new Store();
 
 const keys = {
-  inputValue: 'inputValue',
-  todoList: 'todoList',
   count: 'count',
 };
 /*Add data to store*/
-store.add(keys.inputValue, '');
 store.add(keys.count, 0);
-secondStore.add(keys.todoList, []);
 
 const Component = () => {
   /*Get data from store */
-  const todoList: Array<string> = secondStore.get(keys.todoList);
-  const todoName: string = store.get(keys.inputValue);
   const count: number = store.get(keys.count);
-  const [mount, setMount] = React.useState(true);
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-      <p>count: {count}</p>
-      <input
-        placeholder="enter todo name"
-        onChange={(e: any) => store.update(keys.inputValue, e.target.value)}
-      />
-      <button
-        onClick={() =>
-          secondStore.update(keys.todoList, [...todoList, todoName])
-        }
-      >
-        Add todo
-      </button>
-
       <button onClick={() => store.update(keys.count, count + 1)}>+</button>
-      <button onClick={() => setMount(!mount)}>
-        {mount ? 'Unmount todo list' : 'Mount todo list'}
-      </button>
-      <p>{name}</p>
-      <h1>Todo list</h1>
-      <p>{todoName}</p>
-      {mount ? <TodoList /> : <p>Hey</p>}
     </div>
   );
 };
@@ -142,3 +121,13 @@ ReactDOM.render(<App name="hoa" />, rootElement);
 ```
 
 ![](https://media0.giphy.com/media/sSOY7TBeXWHa7zMK6z/giphy.gif?cid=790b7611556fb5a72472855e96dc1581e537a6a7291be6dc&rid=giphy.gif&ct=g)
+
+### React 18 support <a name="React18"></a>
+
+- See document for React version 18 [here](https://github.com/hoaxvo16/reactive-store/wiki/React-18-support)
+
+### About <a name="about"></a>
+
+- My inspiration to create this is from Michel Weststrate talk [React Native Talks #1 - State Management Beyond the Libraries / Michel Weststrate](https://www.youtube.com/watch?v=cPF4iBedoF0)
+- If there are any issue or contribution please let me known :D
+- Have good day!!!
