@@ -6,10 +6,10 @@
 
 1. [Features](#features)
 2. [Installation](#installation)
-3. [Usage]("#usage")
-4. [Quick start]("#quickstart")
+3. [Usage](#usage)
+4. [Quick start](#quickstart)
 5. [React 18 support](#React18)
-6. [About]("#about")
+6. [About](#about)
 
 ### Features <a name="features"></a>
 
