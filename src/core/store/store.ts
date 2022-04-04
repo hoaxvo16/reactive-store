@@ -27,7 +27,6 @@ export class Store extends BaseStore {
       case 'add':
         if (this.runMiddleware(key, undefined, payload, 'add') !== false) {
           this.dataMap.set(key, payload);
-          this.notify();
         }
         break;
       case 'update':
