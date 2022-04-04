@@ -1,5 +1,5 @@
 import React from 'react';
-import { Store } from './store';
+import { Store } from './store/store';
 
 export function StoreInjector(
   store: Store | Array<Store>,
