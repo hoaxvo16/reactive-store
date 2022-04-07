@@ -1,4 +1,4 @@
-### Reactive store - a minimum and lightweight external store for react
+### Reactive store - a minimum and lightweight external store for React and React Native
 
 ### Table of contents
 
@@ -25,6 +25,7 @@
 - Inject external data to React hook component
 - Support action to remove or update data
 - Light weight
+- Typedcript support
 
 ### Installation <a name="installation"></a>
 
