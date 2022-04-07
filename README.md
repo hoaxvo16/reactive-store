@@ -1,4 +1,4 @@
-### Reactive store - a minimum and lightweight external store for React and React Native
+### Reactive store - a minimum and lightweight external store for React and React Native application
 
 ### Table of contents
 
