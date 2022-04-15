@@ -108,6 +108,10 @@ const Component = () => {
   const countMemo = React.useCallback(() => {
     return store.get('count');
   }, []);
+  //Effect on memo
+  React.useEffect(()=>{
+     console.log("count change")
+  },[countMemo()])
   return <p>{countMemo()}</p>;
 };
 
