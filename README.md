@@ -25,7 +25,7 @@
 - Inject external data to React hook component
 - Support action to remove or update data
 - Light weight
-- Typedcript support
+- TypeScript support
 
 ### Installation <a name="installation"></a>
 
